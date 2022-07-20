@@ -221,4 +221,14 @@ css.Grey = styled.span`
   font-weight: 400;
 `;
 
+css.TextEyeIcon = styled.div`
+  img {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 10px;
+    top: -1px;
+  }
+`;
+
 export default css;

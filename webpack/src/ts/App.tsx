@@ -243,7 +243,11 @@ export default function App() {
       <css.LearnMore>
         <h2>Find your public key in the Chia App interface</h2>
         <h3>Step 1</h3>
-        <h4>On the “Select Key” screen in the Chia app, click on the “See Private Key” icon </h4>
+        <h4>
+          <css.TextEyeIcon>
+            On the “Select Key” screen in the Chia app, click on the “See Private Key” icon <img src="/img/eye.svg" />
+          </css.TextEyeIcon>
+        </h4>
         <img src="/img/select-key.png" />
         <h3>Step 2</h3>
         <h4>Copy the Public Key from the list of keys available. </h4>
