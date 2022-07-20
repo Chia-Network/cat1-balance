@@ -153,10 +153,6 @@ css.ErrorMessage = styled.p`
   color: red;
 `;
 
-css.LearnMoreContainer = styled.div`
-  cursor: pointer;
-`;
-
 css.DownloadSnapshotDb = styled.div`
   text-align: center;
   padding: 15px 0 50px;
@@ -189,6 +185,7 @@ css.LearnMoreArrow = styled.img`
 `;
 
 css.LearnMore = styled.div`
+  margin-top: 5px;
   padding: 10px 20px;
   background: #f8f8f8;
   h2:first-child {

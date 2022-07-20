@@ -294,14 +294,14 @@ export default function App() {
             </css.SearchButton>
           </css.SearchInput>
           {renderError()}
-          <css.LearnMoreContainer>
+          <div>
             <p>This website only supports looking up wallets with observer keys. Any wallet created since 1.3 uses an observer key by default.</p>
             <css.LearnMoreLink onClick={() => setLearnMore(!learnMore)}>
               <span>Learn how to find your public key here.</span>
               <css.LearnMoreArrow src="/img/arrow_down.svg" alt="Chia Network Logo" learnMore={learnMore} />
             </css.LearnMoreLink>
             {renderLearnMoreBody()}
-          </css.LearnMoreContainer>
+          </div>
           <p>
             Public keys are 96 characters long. It should look like this:
             <br />
