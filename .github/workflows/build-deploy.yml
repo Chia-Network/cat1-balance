@@ -70,7 +70,7 @@ jobs:
 
       - name: Set docker tag to build
         id: dockertag
-        run: echo "::set-output name=dockertag::ghcr.io/chia-network/cat1-balance:${{ github.sha }}"
+        run: echo "dockertag=ghcr.io/chia-network/cat1-balance:${{ github.sha }}" >>$GITHUB_OUTPUT
 
       - name: Build Docker Container
         uses: docker/build-push-action@v2
