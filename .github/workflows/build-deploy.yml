@@ -15,7 +15,7 @@ concurrency:
 
 jobs:
   package:
-    runs-on: [k8s-internal]
+    runs-on: [k8s-public]
     outputs:
       dockertag: ${{ steps.dockertag.outputs.dockertag }}
     steps:
@@ -85,7 +85,7 @@ jobs:
   deploy:
     needs:
       - package
-    runs-on: [k8s-internal]
+    runs-on: [k8s-public]
     container:
       image: registry.gitlab.com/cmmarslender/kubectl-helm:v3.10.3
     steps:
