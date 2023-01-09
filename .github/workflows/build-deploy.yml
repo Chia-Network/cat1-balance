@@ -15,7 +15,7 @@ concurrency:
 
 jobs:
   package:
-    runs-on: [k8s-internal]
+    runs-on: [k8s-public]
     outputs:
       dockertag: ${{ steps.dockertag.outputs.dockertag }}
     steps:
@@ -25,7 +25,7 @@ jobs:
         uses: Chia-Network/actions/vault/login@main
         with:
           vault_url: ${{ secrets.VAULT_URL }}
-          role_name: github
+          role_name: github-cat1-balance
 
       - name: Get secrets from vault
         uses: hashicorp/vault-action@v2.3.0
@@ -85,7 +85,7 @@ jobs:
   deploy:
     needs:
       - package
-    runs-on: [k8s-internal]
+    runs-on: [k8s-public]
     container:
       image: registry.gitlab.com/cmmarslender/kubectl-helm:v3.10.3
     steps:
@@ -95,7 +95,7 @@ jobs:
         uses: Chia-Network/actions/vault/login@main
         with:
           vault_url: ${{ secrets.VAULT_URL }}
-          role_name: github
+          role_name: github-cat1-balance
 
       - name: Get secrets from vault
         uses: hashicorp/vault-action@v2.4.3
