@@ -8,7 +8,6 @@ metadata:
   {{- end }}
   labels:
     {{- include "cat1-balance.labels" . | nindent 4 }}
-    prometheus: application-metrics
 spec:
   type:  {{ .Values.service.type }}
   ports:
