@@ -89,7 +89,7 @@ jobs:
       - package
     runs-on: [k8s-public]
     container:
-      image: registry.gitlab.com/cmmarslender/kubectl-helm:v3.10.3
+      image: registry.gitlab.com/cmmarslender/kubectl-helm:v3
     steps:
       - uses: actions/checkout@v3
 
